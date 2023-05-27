@@ -95,3 +95,16 @@ soup.div.next_sibling => The next sibling of the div
 soup.div.previous_sibling => The previous sibling of div
 
 \*\*/
+
+I want to scrape the website and have it in this format
+
+jobs = [
+{
+id : 1 ,
+title : Senior Python Developer
+location : LA ,
+company : ABC ,
+date : 2023-10-10 ,
+link : https://place"
+}
+]
