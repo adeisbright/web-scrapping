@@ -66,6 +66,20 @@ job_dict = {
     "link_class": "card-footer-item",
 }
 
-scraped_jobs = get_jobs("https://realpython.github.io/fake-jobs/", job_dict)
 
-print(scraped_jobs)
+def write_file_content(filePath):
+    try:
+
+        jobs = get_jobs("https://realpython.github.io/fake-jobs/", job_dict)
+
+        if len(jobs) > 0:
+            with open(filePath, "a+") as file:
+                for _, job in enumerate(jobs):
+                    file.write(str(job) + "\n")
+            file.close()
+    except Exception as error:
+        print(error)
+
+
+if __name__ == "__main__":
+    write_file_content("job.txt")
