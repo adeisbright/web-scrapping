@@ -108,3 +108,19 @@ date : 2023-10-10 ,
 link : https://place"
 }
 ]
+
+When you retrieve any item from a beautiful object using the dot notation, you end up with a NavigableString .
+This string can be treated as a string and will not have access to methods on list.
+
+A Tag Object has list methods that arises from the usage of find and find_all function.
+
+### Testing
+
+To run the tester on the command line, run this command :
+
+python3 -m unittest test-doubler -v
+
+The tests in test-doubler will run whether the file is a module or a package
+
+The -v means the output should be verbose. More information is returned about your tests especially
+on failures and success
